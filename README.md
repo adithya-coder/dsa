@@ -208,11 +208,13 @@ for item in association_results:
     print("Rule:", item.items)
     print("Support:", item.support)
    
-python
+```python
 store_data.shape
+```
 ##
 #lab 4
 
+```python
 import libries 
 import pandas as pd
  use classifer and split libry fro, sklearn library
@@ -275,6 +277,9 @@ predict command is use
 zoo_classifier.predict(x_test[10:15])
 
 see the result
-y_test[10:15]  ```
+y_test[10:15]
+
+```
+#lab 5
 
 
