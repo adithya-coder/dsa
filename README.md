@@ -281,5 +281,53 @@ y_test[10:15]
 
 ```
 #lab 5
+```python
+#import pandas, numpy, matpolot
+import pandas as pd
+import numpy as np
+from matplotlib import pyplot as plt
+#install statsemodels
+# import statmodel lib for regression
+import statsmodels.api as sm
+from sklearn.linear_model import LinearRegression
+#import data set 
+salary_data=pd.read_csv("salary_data.csv")
+#read the data first five
+salary_data.head()
+#display entire data set
+salary_data
+#to see the raws and columns
+salary_data.shape
+#get a statical description
+salary_data['Salary'].describe()
+# assign independent values to x
+# frist para is raws
+#second para is columns, all the columns -1
+x = salary_data.iloc[:,:-1].values
+#assign depenedet values to y
+# 2 cloumns mean 2 is eqal to index 1
+y = salary_data.iloc[:,1].values
+# plot the data points
+#check whther apply linear RM
+plt.scatter(x,y)
+#define the model
+model = LinearRegrssion()
+#apply fitted model
+model.fit(x,y)
+#show regression intercept value BETA 0 value
+print(model.intercept_)
+# show the coefficent value, BETA 1 value
+print(model.coef_)
+#predict using 5 as x
+#B0 + B1 * x
+model.predict(np.array([[5]]))
+#add the constatnt too the equation
+x1 = sm.add_constant(x)
+#ESTIMATE regression coefficient, summaries the model
+#OLS regression result
+model = sm.OLS(y,x1).fit()
+model.summary()
+#r Squred is vor the the accuracy
+# p value for do a hypothesis tes
 
-
+```
