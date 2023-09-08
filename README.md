@@ -203,15 +203,15 @@ association_results = list(association_rules)
 ```
 
 
-```python
+python
 for item in association_results:
     print("Rule:", item.items)
     print("Support:", item.support)
    
-```python
+python
 store_data.shape
 
-#lab 4
+# lab 2
 
 import libries 
 import pandas as pd
@@ -277,4 +277,4 @@ zoo_classifier.predict(x_test[10:15])
 see the result
 y_test[10:15]
 
-#
+
