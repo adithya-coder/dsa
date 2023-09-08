@@ -211,7 +211,7 @@ for item in association_results:
 python
 store_data.shape
 
-```lab 4```
+``` lab 4
 
 import libries 
 import pandas as pd
@@ -275,6 +275,6 @@ predict command is use
 zoo_classifier.predict(x_test[10:15])
 
 see the result
-y_test[10:15]
+y_test[10:15]  ```
 
 
