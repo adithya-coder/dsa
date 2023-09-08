@@ -215,68 +215,52 @@ store_data.shape
 #lab 4
 
 ```python
-import libries 
+#import libries 
 import pandas as pd
- use classifer and split libry fro, sklearn library
+# use classifer and split libry fro, sklearn library
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
-import the data set
-
+#import the data set
 data_zoo = pd.read_csv("zoo.csv")
-
-see first five raws
+#see first five raws
 data_zoo.head()
-
-see raws and columns
+#see raws and columns
 data_zoo.shape
-
- assign 1 - 17 data set into x variable
+# assign 1 - 17 data set into x variable
 x = data_zoo.iloc[:,1:17]
 x.shape
- assign last column to the y variable
-
+# assign last column to the y variable
 y = data_zoo.iloc[:,17]
-when only one column not show the column number
+#when only one column not show the column number
 y.shape
-
-first five y data
+#first five y data
 y.head()
-
-first five x data
+#first five x data
 x.head()
-devide data set to train and test 
-test data part size is 0.25
-
+#devide data set to train and test 
+#test data part size is 0.25
 x_train,x_test,y_train,y_test = train_test_split(x,y, test_size=0.25)
-view the x_train size
+#view the x_train size
 x_train.shape
-
-view the x_test size
+#view the x_test size
 x_test.shape
-
-75 raws for train
-only one column
+#75 raws for train
+#only one column
 y_train.shape
-
-25 raws for test
-only one column
+#25 raws for test
+#only one column
 y_test.shape
-
-build the classfier
+#build the classfier
 zoo_classifier = DecisionTreeClassifier(random_state=0)
 zoo_classifier
-
-train the classifer using train data set x
+#train the classifer using train data set x
 zoo_classifier.fit(x_train,y_train)
-
-test the accuracy using x_test and y_test
+#test the accuracy using x_test and y_test
 zoo_classifier.score(x_test,y_test)
-ake prediction
-
-predict command is use
+#make prediction
+#predict command is use
 zoo_classifier.predict(x_test[10:15])
-
-see the result
+#see the result
 y_test[10:15]
 
 ```
